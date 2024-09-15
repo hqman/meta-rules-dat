@@ -197,6 +197,10 @@ jobs:
           curl -sSL https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/YouTube/YouTube.yaml | ${{ env.SED }} > ./data-lite/youtube
           curl -sSL https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/GlobalMedia/GlobalMedia.yaml | ${{ env.SED }} > ./data-lite/proxymedia
 
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml | ${{ env.SED }} > ./data-lite/claude
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml | ${{ env.SED }} > ./data-lite/gemini
+          
+
           echo include:google >> ./data-lite/proxy && echo include:github >> ./data-lite/proxy && echo include:netflix >> ./data-lite/proxy
           echo ipleak.net >> ./data-lite/proxy && echo browserleaks.org >> ./data-lite/proxy
           echo "full:o33249.ingest.sentry.io" >>  ./data-lite/openai
