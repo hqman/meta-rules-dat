@@ -161,7 +161,7 @@ jobs:
           cd custom || exit 1
           # echo sentry.io >>  ../community/data/openai
           echo ipleak.net >> ../community/data/geolocation-\!cn && echo browserleaks.org >> ../community/data/geolocation-\!cn
-          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml | ${{ env.SED }} > .../community/data/claude
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml | ${{ env.SED }} > ../community/data/claude
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml | ${{ env.SED }} > ../community/data/gemini
           
           go run ./ --datapath=../community/data
