@@ -178,19 +178,10 @@ jobs:
         run: |
           mkdir -p meta-rule/geo/geosite && mkdir -p meta-rule/geo/geoip
           cd convert
-
-          
           go run ./ geosite -f ../custom/publish/geosite.dat -o ../meta-rule/geo/geosite
           
 
-      - name: Convert geo-lite to meta-rule-set
-        env:
-          NO_SKIP: true
-        run: |
-          mkdir -p meta-rule/geo-lite/geosite && mkdir -p meta-rule/geo-lite/geoip
-          cd convert
-          go run ./ geosite -f ../community/geosite-lite.dat -o ../meta-rule/geo-lite/geosite
-      
+  
 
      
 
