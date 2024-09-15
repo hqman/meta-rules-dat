@@ -161,7 +161,7 @@ jobs:
           cd custom || exit 1
           echo claude.ai >>  ../community/data/openai
           echo anthropic.com >>  ../community/data/openai
-          
+          echo cdn.usefathom.com >>  ../community/data/openai
           echo ipleak.net >> ../community/data/geolocation-\!cn && echo browserleaks.org >> ../community/data/geolocation-\!cn
           go run ./ --datapath=../community/data
 
